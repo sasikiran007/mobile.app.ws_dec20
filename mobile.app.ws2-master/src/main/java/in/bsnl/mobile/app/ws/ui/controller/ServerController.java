@@ -74,13 +74,6 @@ public class ServerController {
         return mobileAlertService.getTrackers();
     }
 
-    @GetMapping(path = "/events")
-    public List<TrackerResponse> getEvents1() {
-        logger.debug(TAG+"Get /events is called");
-        return mobileAlertService.getTrackers();
-    }
-
-
     @GetMapping(path = "/events/{alertLevel}")
     public List<EventResponse> getEvents(@PathVariable("alertLevel") String alertLevel) {
         List<EventResponse> returned  = new ArrayList<>();
